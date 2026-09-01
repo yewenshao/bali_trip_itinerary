@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123b3a">
+  <title>Bali Family Trip · 2026.10.17–10.23</title>
+  <style>
+    :root {
+      --ink: #163536;
+      --muted: #62807b;
+      --paper: #fffdf8;
+      --sand: #f5ead7;
+      --sage: #dcebe2;
+      --sea: #0f7773;
+      --sea-dark: #0b4d4b;
+      --coral: #e98064;
+      --line: rgba(22, 53, 54, .13);
+      --easy: #2b956d;
+      --moderate: #d88a20;
+      --travel: #d85f55;
+      --shadow: 0 14px 42px rgba(19, 59, 58, .11);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #f8f1e6;
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.55;
+    }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 392px;
+      padding: 52px 24px 38px;
+      color: #fffdf6;
+      background:
+        radial-gradient(circle at 87% 12%, rgba(255, 210, 125, .38) 0 2%, transparent 21%),
+        radial-gradient(ellipse at 6% 105%, rgba(85, 169, 141, .46) 0 28%, transparent 29%),
+        linear-gradient(133deg, #0a4a4a 0%, #176d69 49%, #29918b 100%);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 680px; height: 220px;
+      bottom: -120px; right: -80px;
+      border-radius: 50%;
+      background: #fff8e9;
+      opacity: .13;
+      transform: rotate(-9deg);
+    }
+    .wrap { position: relative; z-index: 1; width: min(1120px, 100%); margin: 0 auto; }
+    .eyebrow { margin: 0 0 10px; font-size: 12px; letter-spacing: .16em; font-weight: 800; text-transform: uppercase; opacity: .83; }
+    h1 { max-width: 780px; margin: 0; font-family: Georgia, "Noto Serif SC", serif; font-size: clamp(40px, 7vw, 72px); font-weight: 500; letter-spacing: -.04em; line-height: 1.02; }
+    .subtitle { margin: 18px 0 0; max-width: 620px; font-size: 16px; opacity: .9; }
+    .home { display: inline-flex; gap: 8px; align-items: center; margin-top: 25px; padding: 8px 12px; border: 1px solid rgba(255,255,255,.24); border-radius: 999px; background: rgba(255,255,255,.1); font-size: 13px; }
+    .summary { width: min(1072px, calc(100% - 40px)); margin: -22px auto 0; position: relative; z-index: 2; display: grid; grid-template-columns: repeat(3, 1fr); background: var(--paper); border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; }
+    .summary > div { min-height: 89px; padding: 18px 21px; border-right: 1px solid var(--line); }
+    .summary > div:last-child { border: 0; }
+    .summary b, .summary span { display: block; }
+    .summary b { font-size: 20px; line-height: 1.1; }
+    .summary span { margin-top: 5px; color: var(--muted); font-size: 12px; }
+    .travel-details { width: min(1072px, calc(100% - 40px)); margin: 18px auto 0; position: relative; z-index: 2; display: grid; grid-template-columns: 1.12fr 1fr; gap: 1px; overflow: hidden; border: 1px solid rgba(22,53,54,.09); border-radius: 16px; background: var(--line); box-shadow: 0 9px 28px rgba(19, 59, 58, .07); }
+    .stay, .flight-area { padding: 20px 22px; background: var(--paper); }.travel-kicker { margin: 0 0 8px; color: var(--sea); font-size: 11px; font-weight: 800; letter-spacing: .12em; }
+    .stay h2 { font-family: inherit; font-size: 17px; font-weight: 800; }.stay p { margin: 5px 0 0; color: var(--muted); font-size: 13px; }.stay .address { color: var(--ink); font-weight: 700; }
+    .flight-area { padding: 0; display: grid; grid-template-columns: 1fr 1fr; }.flight { padding: 20px 18px; }.flight + .flight { border-left: 1px solid var(--line); }.flight h3 { margin: 0; font-size: 14px; }.flight .route { margin: 4px 0; color: var(--sea-dark); font-size: 16px; font-weight: 800; }.flight p { margin: 4px 0 0; color: var(--muted); font-size: 11px; }.flight .price { display: inline-block; margin-top: 9px; padding: 4px 7px; border-radius: 6px; color: #915906; background: #fff0cd; font-size: 11px; font-weight: 800; }.option { display: inline-block; margin-left: 5px; padding: 2px 5px; border-radius: 5px; color: #72664e; background: #f2eadc; font-size: 9px; vertical-align: 1px; }
+    main { width: min(1120px, calc(100% - 40px)); margin: 42px auto 70px; }
+    .intro { display: flex; justify-content: space-between; align-items: end; gap: 28px; margin-bottom: 24px; }
+    h2 { margin: 0; font-family: Georgia, "Noto Serif SC", serif; font-size: 28px; font-weight: 500; }
+    .intro p { max-width: 520px; margin: 0; color: var(--muted); font-size: 14px; }
+    .legend { display: flex; flex-wrap: wrap; gap: 9px; margin-bottom: 22px; }
+    .tag, .pill { display: inline-flex; align-items: center; border-radius: 999px; font-size: 11px; font-weight: 800; letter-spacing: .03em; white-space: nowrap; }
+    .tag { gap: 6px; padding: 6px 9px; background: #fffaf0; border: 1px solid var(--line); color: var(--muted); }
+    .pill { padding: 5px 9px; color: white; }
+    .easy { background: var(--easy); }.moderate { background: var(--moderate); }.travel { background: var(--travel); }
+    .days { display: grid; gap: 18px; }
+    .day { position: relative; display: grid; grid-template-columns: 156px minmax(0, 1fr); background: var(--paper); border: 1px solid rgba(22,53,54,.09); border-radius: 17px; box-shadow: 0 7px 20px rgba(28, 64, 61, .05); overflow: hidden; }
+    .day-side { padding: 25px 22px; color: #edf8ef; background: var(--sea-dark); }
+    .day:nth-child(3n+2) .day-side { background: #3f826f; }
+    .day:nth-child(3n) .day-side { background: #b46649; }
+    .day-no { font-family: Georgia, serif; font-size: 38px; line-height: 1; opacity: .62; }
+    .day-date { margin-top: 8px; font-size: 15px; font-weight: 800; }
+    .day-theme { margin-top: 8px; font-size: 13px; line-height: 1.35; opacity: .87; }
+    .day-body { padding: 24px 27px 25px; }
+    .day-head { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin-bottom: 15px; }
+    .day-head h3 { margin: 0; font-size: 19px; line-height: 1.25; }
+    .timeline { position: relative; padding-left: 27px; }
+    .timeline::before { content: ""; position: absolute; left: 6px; top: 9px; bottom: 9px; width: 1px; background: #c9ddd5; }
+    .item { position: relative; display: grid; grid-template-columns: 108px 1fr; gap: 12px; padding: 0 0 13px; }
+    .item:last-child { padding-bottom: 0; }
+    .item::before { content: ""; position: absolute; width: 11px; height: 11px; left: -26px; top: 5px; border: 3px solid var(--paper); border-radius: 50%; background: var(--sea); box-shadow: 0 0 0 1px #96beb0; }
+    .item.meal::before { background: var(--coral); }
+    .item.drive::before { background: #d89c41; }
+    .time { padding-top: 1px; color: var(--sea-dark); font-size: 12px; font-weight: 800; }
+    .item strong { font-size: 14px; }
+    .item p { margin: 2px 0 0; color: var(--muted); font-size: 13px; }
+    .note { display: flex; gap: 8px; margin: 18px 0 0; padding: 11px 13px; border-radius: 9px; background: #f0f7f2; color: #466760; font-size: 12px; }
+    .tipbox { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 27px; }
+    .tip { padding: 18px 19px; border-radius: 13px; background: #eee1ca; }
+    .tip:nth-child(2) { background: #dcebe2; }.tip:nth-child(3) { background: #d6ebe8; }
+    .tip h3 { margin: 0 0 7px; font-size: 14px; }.tip p { margin: 0; color: #466760; font-size: 12px; }
+    .day-photo { position: relative; margin: 0 0 18px; overflow: hidden; border-radius: 11px; background: #d4e4dd; }
+    .day-photo img { display: block; width: 100%; height: 175px; object-fit: cover; }
+    .day-photo figcaption { position: absolute; right: 8px; bottom: 7px; padding: 3px 7px; border-radius: 999px; color: white; background: rgba(8, 43, 42, .68); font-size: 10px; }.day-photo a { color: inherit; }
+    .day-dining { margin-top: 16px; padding: 12px 13px; border-radius: 10px; background: #fff7e8; border: 1px solid #eddcb7; }
+    .day-dining > span { display: block; margin-bottom: 7px; color: #99713a; font-size: 11px; font-weight: 800; letter-spacing: .06em; }
+    .dining-card { display: block; color: inherit; text-decoration: none; }.dining-card + .dining-card { margin-top: 10px; padding-top: 10px; border-top: 1px solid #eddcb7; }.dining-card:hover strong { text-decoration: underline; }.dining-line { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }.dining-card strong { font-size: 13px; }.dining-card p { margin: 3px 0 0; color: #5f746e; font-size: 12px; }
+    .dining-card[href*="QBm1mMtYGbF5WTDx7"] { display: none; }
+    .dining-card[href*="zx4e74GAatDSbQ238"] p::after { content: "\A营业：每日 10:00–23:45 · 与本日用餐时段匹配"; white-space: pre-line; color: #99713a; }.dining-card[href*="Rremihg9ACsNrLLj7"] p::after { content: "\A营业：每日 09:00–24:00 · 与本日用餐时段匹配"; white-space: pre-line; color: #99713a; }.dining-card[href*="BXu9AQMNerp9vyPw8"] p::after { content: "\A营业：计划日期约 15:30–23:00 · 与本日晚餐时段匹配"; white-space: pre-line; color: #99713a; }.dining-card[href*="Watercress%20Ubud"] p::after { content: "\A营业：每日 07:00–21:00 · 与 11:45 午餐时段匹配"; white-space: pre-line; color: #99713a; }.dining-card[href*="t2Ks9ytRzdyn68QAA"] p::after { content: "\A营业：周一 09:00–22:00 · 与 19:00 晚餐时段匹配"; white-space: pre-line; color: #99713a; }.dining-card[href*="kRFgviJbc15fkUbt5"] p::after { content: "\A营业：每日 11:00–23:00 · 与 19:00 晚餐时段匹配"; white-space: pre-line; color: #99713a; }.dining-card[href*="Milk%20and%20Madu%20Berawa"] p::after { content: "\A营业：每日 07:00–22:00 · 与 11:45 午餐时段匹配"; white-space: pre-line; color: #99713a; }.dining-card[href*="Bawang%20Merah%20Beachfront"] p::after { content: "\A营业：每日 12:00–22:00 · 与 17:30 晚餐时段匹配"; white-space: pre-line; color: #99713a; }
+    .days > .day:nth-child(4) .day-body > .timeline > .item:nth-child(2) p { font-size: 0; }.days > .day:nth-child(4) .day-body > .timeline > .item:nth-child(2) p::after { content: "约 10–20 分钟。"; color: var(--muted); font-size: 13px; }.spa-options { grid-column: 1 / -1; margin-top: 16px; padding: 12px 13px; border: 1px solid #d9c9e8; border-radius: 10px; background: #f9f4fc; }.spa-options > span { display: block; margin-bottom: 7px; color: #78569b; font-size: 11px; font-weight: 800; letter-spacing: .06em; }.spa-card { display: block; color: inherit; text-decoration: none; }.spa-card + .spa-card { margin-top: 10px; padding-top: 10px; border-top: 1px solid #dfd1e8; }.spa-card:hover strong { text-decoration: underline; }.spa-card .dining-line { align-items: baseline; }.spa-card p { margin: 3px 0 0; color: #5f746e; font-size: 12px; }
+    .rating { flex: none; padding: 4px 7px; color: #915906; border-radius: 7px; background: #fff0cd; font-size: 11px; font-weight: 800; }
+    .diver-plan { margin: 17px 0 0; padding: 13px 14px; border: 1px solid #b7d8e2; border-radius: 10px; background: #eef9fc; }.diver-plan > span { display: block; margin-bottom: 8px; color: #22718a; font-size: 11px; font-weight: 800; letter-spacing: .07em; }.diver-plan .item { grid-template-columns: 108px 1fr; }.diver-plan .item::before { background: #398fb0; box-shadow: 0 0 0 1px #87c4d8; }.diver-plan .item strong { color: #15586d; }.diver-plan > .note { display: none; }
+    .days > .day:nth-child(3) .day-body, .days > .day:nth-child(4) .day-body, .days > .day:nth-child(5) .day-body { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(245px, .8fr); column-gap: 22px; }.days > .day:nth-child(3) .day-head, .days > .day:nth-child(4) .day-head, .days > .day:nth-child(5) .day-head, .days > .day:nth-child(3) .day-photo, .days > .day:nth-child(4) .day-photo, .days > .day:nth-child(5) .day-photo, .days > .day:nth-child(3) .day-dining, .days > .day:nth-child(4) .day-dining, .days > .day:nth-child(5) .day-dining, .days > .day:nth-child(3) .note, .days > .day:nth-child(4) .note, .days > .day:nth-child(5) .note { grid-column: 1 / -1; }.days > .day:nth-child(3) .day-body > .timeline, .days > .day:nth-child(4) .day-body > .timeline, .days > .day:nth-child(5) .day-body > .timeline { grid-column: 1; }.days > .day:nth-child(3) .diver-plan, .days > .day:nth-child(4) .diver-plan, .days > .day:nth-child(5) .diver-plan { grid-column: 2; margin: 0; align-self: start; }.day:nth-child(3) .diver-plan > span, .day:nth-child(4) .diver-plan > span, .day:nth-child(5) .diver-plan > span { font-size: 0; }.day:nth-child(3) .diver-plan > span::after { content: "🤿 SHEN YI · OW 第 1 天"; font-size: 11px; }.day:nth-child(4) .diver-plan > span::after { content: "🤿 SHEN YI · OW 第 2 天"; font-size: 11px; }.day:nth-child(5) .diver-plan > span::after { content: "🤿 SHEN YI · OW 第 3 天"; font-size: 11px; }
+    .day:nth-child(3) .diver-plan .item.drive:first-child .time, .day:nth-child(4) .diver-plan .item.drive:first-child .time, .day:nth-child(5) .diver-plan .item.drive:first-child .time { font-size: 0; }.day:nth-child(3) .diver-plan .item.drive:first-child strong, .day:nth-child(4) .diver-plan .item.drive:first-child strong, .day:nth-child(5) .diver-plan .item.drive:first-child strong { font-size: 0; }.day:nth-child(3) .diver-plan .item.drive:first-child p, .day:nth-child(4) .diver-plan .item.drive:first-child p, .day:nth-child(5) .diver-plan .item.drive:first-child p { display: none; }.day:nth-child(3) .diver-plan .item.drive:first-child .time::after { content: "约 07:00 出发"; font-size: 12px; }.day:nth-child(3) .diver-plan .item.drive:first-child strong::after { content: "出租车 · Villa → Sanur（沙努尔）潜店"; font-size: 14px; }.day:nth-child(3) .diver-plan .item.drive:first-child > div::after { content: "单程通常约 50–70 分钟；早上车流开始增加，预留至 75 分钟更稳妥。"; display: block; margin-top: 2px; color: var(--muted); font-size: 13px; }.day:nth-child(4) .diver-plan .item.drive:first-child .time::after, .day:nth-child(5) .diver-plan .item.drive:first-child .time::after { content: "约 06:00 出发"; font-size: 12px; }.day:nth-child(4) .diver-plan .item.drive:first-child strong::after, .day:nth-child(5) .diver-plan .item.drive:first-child strong::after { content: "出租车 · Villa → Sanur（沙努尔）集合"; font-size: 14px; }.day:nth-child(4) .diver-plan .item.drive:first-child > div::after, .day:nth-child(5) .diver-plan .item.drive:first-child > div::after { content: "单程约 45–60 分钟，06:45–06:55 抵达较合适；预留至 07:00 集合。"; display: block; margin-top: 2px; color: var(--muted); font-size: 13px; }
+    footer { padding: 27px 24px 36px; text-align: center; color: #66817c; font-size: 12px; }
+    @media (max-width: 700px) {
+      .hero { min-height: 340px; padding: 40px 22px 32px; }
+      .summary { width: calc(100% - 28px); grid-template-columns: 1fr 1fr; }
+      .summary > div { min-height: 75px; padding: 14px; }.summary > div:nth-child(2) { border-right: 0; }.summary > div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .travel-details { width: calc(100% - 28px); grid-template-columns: 1fr; }.flight-area { grid-template-columns: 1fr; }.flight + .flight { border-top: 1px solid var(--line); border-left: 0; }.diver-plan .item { grid-template-columns: 82px 1fr; }
+      main { width: calc(100% - 28px); margin-top: 32px; }.intro { display: block; }.intro p { margin-top: 8px; }.day { grid-template-columns: 1fr; }.day-side { display: flex; align-items: center; gap: 14px; padding: 14px 18px; }.day-no { font-size: 27px; }.day-date, .day-theme { margin: 0; }.day-theme { margin-left: auto; text-align: right; }.day-body { padding: 19px 17px; }.item { grid-template-columns: 82px 1fr; }.tipbox { grid-template-columns: 1fr; gap: 10px; }.day-photo img { height: 150px; }.days > .day:nth-child(3) .day-body, .days > .day:nth-child(4) .day-body, .days > .day:nth-child(5) .day-body { display: block; }.days > .day:nth-child(3) .diver-plan, .days > .day:nth-child(4) .diver-plan, .days > .day:nth-child(5) .diver-plan { margin-top: 17px; }
+    }
+    @media print { body { background: white; }.hero { min-height: auto; padding: 30px 24px; }.summary { box-shadow: none; }.day { break-inside: avoid; box-shadow: none; } main { margin-bottom: 18px; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Indonesia · 2026.10.17–10.23</p>
+      <h1>巴厘岛家庭行程</h1>
+      <p class="subtitle">7天6晚 · 三代同游</p>
+      <div class="home">⌂ Villa · Jl. Bumbak No.48, Kerobokan / Umalas</div>
+    </div>
+  </header>
+
+  <section class="summary" aria-label="行程概览">
+    <div><b>10.17–10.23</b><span>7天6晚 · 巴厘岛</span></div>
+    <div><b>6晚 Villa</b><span>每天含早餐</span></div>
+    <div><b>3个远程日</b><span>乌布 · Safari · Waterbom</span></div>
+  </section>
+
+  <section class="travel-details" aria-label="机票与住宿信息">
+    <div class="stay"><p class="travel-kicker">STAY · 6 NIGHTS</p><h2>🏡 Villa · Kerobokan / Umalas</h2><p class="address">Jl. Bumbak No.48, Kerobokan / Umalas, Bali</p><p>每日含 Villa 早餐 · 10/17 入住 · 现有行程按 10/23 退房返程安排</p></div>
+    <div class="flight-area">
+      <div class="flight"><p class="travel-kicker">OUTBOUND · 10 OCT 17</p><h3>TransNusa 8B552</h3><div class="route">SIN 10:55 → DPS 13:30</div><p>每人 7kg 随身 + 20kg 托运（机票含）</p><span class="price">SGD 196 / 人</span></div>
+      <div class="flight"><p class="travel-kicker">RETURN FLIGHTS</p><h3>提前返程 · 10/21 <span class="option">一家同行者</span></h3><div class="route">DPS 14:05 → SIN 16:55</div><p>每人 10kg 随身；20kg 托运另加 SGD 47 / 人</p><span class="price">SGD 152.66 / 人 · 含 20kg 为 SGD 199.66 / 人</span><h3 style="margin-top:13px">其余成员返程 · 10/23</h3><div class="route">DPS 13:15 → SIN 16:00</div><p>Singapore Airlines SQ939；行李额按机票订单确认，行程第 7 天送机。</p></div>
+    </div>
+  </section>
+
+  <main>
+    <section class="intro">
+      <div><h2>每日安排</h2></div>
+      <p>车程为常见交通情况下的估算；巴厘岛路况波动较大，远程日建议预留缓冲。餐饮预算已按 1 SGD ≈ Rp13,900 换算，未含可能的税费与服务费。</p>
+    </section>
+    <div class="legend"><span class="tag"><i class="pill easy">轻松</i> 短程 / 休闲</span><span class="tag"><i class="pill moderate">适中</i> 半日核心活动</span><span class="tag"><i class="pill travel">长途</i> 早出发、返程休息</span></div>
+    <section class="days">
+      <article class="day">
+        <aside class="day-side"><div class="day-no">01</div><div class="day-date">10月17日 · 周六</div><div class="day-theme">抵达日<br>轻松入岛</div></aside>
+        <div class="day-body"><div class="day-head"><h3>抵达、入住与附近晚餐</h3><span class="pill easy">轻松</span></div><figure class="day-photo"><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/504315485.jpg?k=a40a750921a4167542dfeb165206247ddbba9f03489aca66d63c826b04b73fac&amp;o=" alt="Umalas 热带 Villa 泳池" referrerpolicy="no-referrer"><figcaption><a href="https://www.booking.com/hotel/id/new-tropical-design-private-villa-complex-6-br-umalas-w-staff.en-gb.html" target="_blank" rel="noopener noreferrer">实景图源：Booking.com</a></figcaption></figure><div class="timeline">
+          <div class="item"><span class="time">10:55–13:30</span><div><strong>✈️ SIN → DPS</strong><p>机上或机场简单午餐即可。</p></div></div>
+          <div class="item"><span class="time">13:30–15:00</span><div><strong>入境、取行李</strong><p>预留约 1–1.5 小时；宝宝用品与推车随身优先取用。</p></div></div>
+          <div class="item drive"><span class="time">15:00–16:15</span><div><strong>DPS → Villa</strong><p>约 45–75 分钟，下午可能拥堵。</p></div></div>
+          <div class="item"><span class="time">16:15–18:00</span><div><strong>入住、泳池、休息</strong><p>不额外安排景点，让全家恢复体力。</p></div></div>
+          <div class="item meal"><span class="time">18:00–20:00</span><div><strong>晚餐 · Jl. Bumbak / Umalas 附近</strong><p>车程约 5–10 分钟；第一晚不跑远，吃完回 Villa 早休息。</p></div></div>
+        </div><div class="day-dining"><span>晚餐备选 · 步行 2–7 分钟 · SGD / 人</span><a class="dining-card" href="https://maps.app.goo.gl/zx4e74GAatDSbQ238" target="_blank" rel="noopener noreferrer"><div class="dining-line"><strong>Pizza Fabbrica（披萨法布里卡）</strong><span class="rating">★ 4.7 · ~1,100 评</span></div><p>约 SGD 7–18；柴火披萨、意面。幼儿可选玛格丽特披萨或原味意面，酱料另放。</p></a><a class="dining-card" href="https://maps.app.goo.gl/Rremihg9ACsNrLLj7" target="_blank" rel="noopener noreferrer"><div class="dining-line"><strong>Daeng Burger（大恩汉堡）</strong><span class="rating">★ 4.6 · ~800 评</span></div><p>约 SGD 5–9；和牛汉堡、薯条。可点原味小汉堡、芝士吐司，备注不辣、不加酱。</p></a><a class="dining-card" href="https://maps.app.goo.gl/BXu9AQMNerp9vyPw8" target="_blank" rel="noopener noreferrer"><div class="dining-line"><strong>Thai Spice（泰香）</strong><span class="rating">★ 4.4 · ~370 评</span></div><p>约 SGD 9–11；泰式家常菜。孩子可点白饭、炒河粉或鸡肉，并明确要求 no chilli。</p></a></div></div>
+      </article>
+
+      <article class="day">
+        <aside class="day-side"><div class="day-no">02</div><div class="day-date">10月18日 · 周日</div><div class="day-theme">乌布<br>梯田与市集</div></aside>
+        <div class="day-body"><div class="day-head"><h3>Tegallalang / Alas 梯田 · 乌布皇宫 · 市场</h3><span class="pill travel">长途</span></div><figure class="day-photo"><img src="https://www.indonesia.travel/contentassets/90de6ce1bef649e884b3c8940d06ea5f/tegallalang.jpg" alt="德格拉朗梯田实景" loading="lazy" referrerpolicy="no-referrer"><figcaption><a href="https://www.indonesia.travel/uae/en/travel-ideas/adventure/mau-liburan-cek-8-destinasi-di-bali-rekomendasi-pemenang-itstimeforbalitop3-ini" target="_blank" rel="noopener noreferrer">实景图源：Wonderful Indonesia</a></figcaption></figure><div class="timeline">
+          <div class="item meal"><span class="time">06:45–07:15</span><div><strong>🥐 Villa 早餐</strong><p>早点出发，避开正午日晒与人潮。</p></div></div>
+          <div class="item drive"><span class="time">07:30–09:00</span><div><strong>Villa → Tegallalang / Alas 梯田（德格拉朗 / 阿拉斯梯田）</strong><p>约 1.5–2 小时；建议备水、帽子和轻便婴儿车/背带。</p></div></div>
+          <div class="item"><span class="time">09:00–10:30</span><div><strong>🌾 梯田（Rice Terraces）观景与拍照</strong><p>Swing 可选；老人和宝宝以观景平台为主，不必下到深处。</p></div></div>
+          <div class="item drive"><span class="time">10:30–11:30</span><div><strong>梯田 → Ubud Center（乌布市中心）</strong><p>约 30–45 分钟。</p></div></div>
+          <div class="item meal"><span class="time">11:45–13:15</span><div><strong>午餐 · Ubud Center（乌布市中心）</strong><p>优先选择有空调、High Chair 和大桌的餐厅。</p></div></div>
+          <div class="item"><span class="time">13:30–14:15</span><div><strong>🏯 Ubud Palace（乌布皇宫）</strong><p>步行参观传统建筑，停留不宜太久。</p></div></div>
+          <div class="item"><span class="time">14:15–15:45</span><div><strong>🛍️ Ubud Art Market（乌布艺术市场）</strong><p>皇宫旁步行 1–3 分钟；自由选购纪念品。</p></div></div>
+          <div class="item drive"><span class="time">16:00–18:00</span><div><strong>Ubud（乌布）→ Villa</strong><p>约 1.5–2 小时；晚餐回 Umalas 附近解决。</p></div></div>
+        </div><div class="day-dining"><span>午餐备选 · SGD / 人</span><a class="dining-card" href="https://www.google.com/maps/search/?api=1&amp;query=Watercress%20Ubud" target="_blank" rel="noopener noreferrer"><div class="dining-line"><strong>Watercress Ubud（沃特克雷斯）</strong><span class="rating">★ 4.7 · 4,730 评</span></div><p>约 SGD 11–18；轻食、汉堡与主食选择多。幼儿可选全熟蛋、鸡肉、面包或简单意面。</p></a></div><p class="note">☀️ 今日行程较长。若全家疲惫，可缩短市场时间，直接返程。</p></div>
+      </article>
+
+      <article class="day">
+        <aside class="day-side"><div class="day-no">03</div><div class="day-date">10月19日 · 周一</div><div class="day-theme">Gianyar<br>Safari 日</div></aside>
+        <div class="day-body"><div class="day-head"><h3>Bali Safari</h3><span class="pill travel">长途</span></div><figure class="day-photo"><img src="https://tamansafari.com/taman-safari-bali/wp-content/uploads/sites/7/2024/11/EOSR0501.jpg" alt="巴厘岛野生动物园大象实景" loading="lazy" referrerpolicy="no-referrer"><figcaption><a href="https://tamansafari.com/taman-safari-bali/photography-package-capture-your-incredible-memories/" target="_blank" rel="noopener noreferrer">实景图源：Taman Safari Bali</a></figcaption></figure><div class="timeline">
+          <div class="item meal"><span class="time">07:00–07:30</span><div><strong>🥐 Villa 早餐</strong><p>今日远程，早餐后直接出发。</p></div></div>
+          <div class="item drive"><span class="time">07:45–09:15</span><div><strong>Villa → Bali Safari（巴厘岛野生动物园）</strong><p>约 1.5–2 小时；孩子可在车上补眠。</p></div></div>
+          <div class="item"><span class="time">09:15–12:00</span><div><strong>🦁 Safari Journey + 动物区</strong><p>当天核心活动；优先安排 Safari 车游与大型动物区域。</p></div></div>
+          <div class="item meal"><span class="time">12:00–13:00</span><div><strong>午餐 · 园内</strong><p>不出园找餐厅，节省体力和时间。</p></div></div>
+          <div class="item"><span class="time">13:00–15:30</span><div><strong>表演 / 动物互动（按状态选择）</strong><p>只选感兴趣的一两项；宝宝或长者累了可提前返程。</p></div></div>
+          <div class="item drive"><span class="time">15:30–17:30</span><div><strong>Safari → Villa</strong><p>约 1.5–2 小时；晚餐安排在 Umalas 附近。</p></div></div>
+        </div><div class="diver-plan"><span>🤿 潜水成员 · OW 第 1 天 · 独立安排</span><div class="timeline"><div class="item drive"><span class="time">07:00–08:15</span><div><strong>Villa → Sanur（沙努尔）潜店</strong><p>约 45–75 分钟；确认是否需补 Umalas 接送差价。</p></div></div><div class="item"><span class="time">上午</span><div><strong>理论课＋理论考试</strong><p>约 2–3 小时；课程前先完成指定线上视频可减轻当天压力。</p></div></div><div class="item"><span class="time">下午</span><div><strong>泳池课 · 24 项技巧</strong><p>约 3–4 小时；结束后自行返回 Villa。</p></div></div><div class="item meal"><span class="time">18:30 后</span><div><strong>可与大部队会合晚餐</strong><p>这是三天潜水课中最稳妥的共同活动。</p></div></div></div><p class="note">课程报价 ¥3,500 ≈ SGD 662 / 人；不含潜水电脑租金 ¥50 / 天 ≈ SGD 9.50 / 天。装备、潜点车船接送与电子教材按课程说明包含。</p></div><div class="day-dining"><span>晚餐备选 · Villa 附近 · SGD / 人</span><a class="dining-card" href="https://maps.app.goo.gl/t2Ks9ytRzdyn68QAA" target="_blank" rel="noopener noreferrer"><div class="dining-line"><strong>The Meat Emporium（肉铺牛排馆）</strong><span class="rating">★ 4.7 · ~2,700 评</span></div><p>约 SGD 18 起；自选肉品现烤。孩子可点原味烤鸡、土豆或全熟牛排，避免胡椒与重口酱汁。</p></a><a class="dining-card" href="https://maps.app.goo.gl/kRFgviJbc15fkUbt5" target="_blank" rel="noopener noreferrer"><div class="dining-line"><strong>Tacos Aqui（塔可小馆）</strong><span class="rating">★ 4.6 · ~900 评</span></div><p>约 SGD 9–11；taco、quesadilla、nachos。鸡肉芝士饼可要求不辣、酱料分开。</p></a><a class="dining-card" href="https://maps.app.goo.gl/QBm1mMtYGbF5WTDx7?g_st=ic" target="_blank" rel="noopener noreferrer"><div class="dining-line"><strong>Souphoria（猪肋排汤）</strong><span class="rating">★ 4.4 · ~1,440 评</span></div><p>平价外带优先；适合回 Villa 吃。给孩子另点白饭、鸡肉或非辣汤品，避开 sambal。</p></a></div></div>
+      </article>
+
+      <article class="day">
+        <aside class="day-side"><div class="day-no">04</div><div class="day-date">10月20日 · 周二</div><div class="day-theme">Berawa<br>海边慢享</div></aside>
+        <div class="day-body"><div class="day-head"><h3>Berawa / Canggu 轻松日</h3><span class="pill easy">轻松</span></div><figure class="day-photo"><img src="https://ik.imagekit.io/tvlk/blog/2025/03/shutterstock_1401206315.jpg?tr=q-70%2Cc-at_max%2Cw-1000%2Ch-600" alt="贝拉瓦海滩日落实景" loading="lazy" referrerpolicy="no-referrer"><figcaption><a href="https://www.traveloka.com/id-id/explore/activities/pantai-berawa-ta/509863" target="_blank" rel="noopener noreferrer">实景图源：Traveloka</a></figcaption></figure><div class="timeline">
+          <div class="item meal"><span class="time">07:30–08:15</span><div><strong>🥐 Villa 早餐</strong><p>潜水成员需更早出发；其余成员从容用餐。</p></div></div>
+          <div class="item"><span class="time">08:30–10:00</span><div><strong>可选 · 成人冲浪课 @ Berawa Beach（贝拉瓦海滩）</strong><p>约 10–20 分钟；其余大人陪同孩子和长者。2–3 岁仅玩沙和浅水，不参加冲浪课。</p></div></div>
+          <div class="item drive"><span class="time">09:30–11:30</span><div><strong>Berawa / Canggu（贝拉瓦 / 仓古）轻松活动</strong><p>约 10–20 分钟；Café、Kids Club 或简单逛街，按孩子状态选择。</p></div></div>
+          <div class="item meal"><span class="time">11:45–13:00</span><div><strong>午餐 · Berawa / Canggu（贝拉瓦 / 仓古）</strong><p>餐厅选择多，选有儿童椅或室内座位的地方。</p></div></div>
+          <div class="item"><span class="time">13:00–15:30</span><div><strong>🏡 回 Villa 午休＋可选上门按摩</strong><p>宝宝午睡、老人休息；按摩建议 60–90 分钟分批进行，家人轮流照看孩子。</p></div></div>
+          <div class="item drive"><span class="time">16:00–18:15</span><div><strong>🏖️ Berawa Beach（贝拉瓦海滩）</strong><p>约 10–20 分钟；玩沙、看日落，小孩不建议深入海中。</p></div></div>
+          <div class="item meal"><span class="time">19:00–20:30</span><div><strong>晚餐 · 回 Umalas / Villa 附近</strong><p>日落后返程约 15–25 分钟；让潜水成员也可参加当天晚餐。</p></div></div>
+        </div><div class="diver-plan"><span>🤿 潜水成员 · OW 第 2 天 · 独立安排</span><div class="timeline"><div class="item drive"><span class="time">约 06:00</span><div><strong>Villa → Sanur（沙努尔）集合</strong><p>需在 07:00 前抵达 Scubacrew；建议前晚确认接送。</p></div></div><div class="item"><span class="time">07:00–17:00</span><div><strong>开放水域课程 1、2</strong><p>潜点由教练按天气和潮汐决定；可能为沙努尔、八丹拜或图蓝本方向。</p></div></div><div class="item drive"><span class="time">17:00 后</span><div><strong>返回 Villa / Umalas</strong><p>预计傍晚抵达；19:00 本地晚餐可与大部队会合。</p></div></div></div></div><div class="day-dining"><span>午餐 / 晚餐备选 · SGD / 人</span><a class="dining-card" href="https://www.google.com/maps/search/?api=1&amp;query=Milk%20and%20Madu%20Berawa" target="_blank" rel="noopener noreferrer"><div class="dining-line"><strong>Milk &amp; Madu Berawa（牛奶与蜂蜜）</strong><span class="rating">★ 4.7 · 8,130 评</span></div><p>约 SGD 7–18；儿童活动/玩耍区与儿童餐，适合午餐。</p></a><a class="dining-card" href="https://maps.app.goo.gl/zx4e74GAatDSbQ238" target="_blank" rel="noopener noreferrer"><div class="dining-line"><strong>Pizza Fabbrica（披萨法布里卡）</strong><span class="rating">★ 4.7 · ~1,100 评</span></div><p>约 SGD 7–18；全家共享方便，幼儿可选原味披萨或意面。</p></a><a class="dining-card" href="https://maps.app.goo.gl/BXu9AQMNerp9vyPw8" target="_blank" rel="noopener noreferrer"><div class="dining-line"><strong>Thai Spice（泰香）</strong><span class="rating">★ 4.4 · ~370 评</span></div><p>约 SGD 9–11；适合潜水成员返程后快速晚餐，点单时注明 no chilli。</p></a></div></div>
+      </article>
+
+      <article class="day">
+        <aside class="day-side"><div class="day-no">05</div><div class="day-date">10月21日 · 周三</div><div class="day-theme">Kuta<br>Waterbom</div></aside>
+        <div class="day-body"><div class="day-head"><h3>Waterbom Bali 水上乐园</h3><span class="pill moderate">适中</span></div><figure class="day-photo"><img src="https://indonesiaimpressiontour.com/wp-content/uploads/2022/09/bali-waterbom-park_5bee42f751bce487edc9daf4e68525257dc88ec0-1.jpg" alt="Waterbom Bali 懒人河实景" loading="lazy" referrerpolicy="no-referrer"><figcaption><a href="https://indonesiaimpressiontour.com/things-to-do-in-kuta/" target="_blank" rel="noopener noreferrer">实景图源：Indonesia Impression Tour</a></figcaption></figure><div class="timeline">
+          <div class="item meal"><span class="time">07:30–08:15</span><div><strong>🥐 Villa 早餐</strong><p>提前返程的一家优先整理行李；其余成员带好防晒、换洗衣物和泳衣。</p></div></div>
+          <div class="item drive"><span class="time">08:30–09:30</span><div><strong>其余成员 · Villa → Waterbom Bali（巴厘岛水上乐园，库塔）</strong><p>约 45–75 分钟，目标开园后尽快入园。</p></div></div>
+          <div class="item drive"><span class="time">10:30–11:45</span><div><strong>提前返程一家 · Villa → DPS Airport（伍拉·赖国际机场）</strong><p>建议不晚于 11:00 左右出发；办理托运、安检后搭乘 Scoot TR289。</p></div></div>
+          <div class="item"><span class="time">14:05–16:55</span><div><strong>✈️ 提前返程一家 · DPS → SIN</strong><p>Scoot TR289；每人 10kg 随身行李，20kg 托运须另加购。</p></div></div>
+          <div class="item"><span class="time">09:30–12:30</span><div><strong>💦 Waterbom 亲子玩水</strong><p>先玩儿童区和懒人河；大人分组陪同，长者以休息区为主。</p></div></div>
+          <div class="item meal"><span class="time">12:30–13:30</span><div><strong>午餐 · 园内</strong><p>避开中午出园折返，午餐后视体力决定是否继续。</p></div></div>
+          <div class="item"><span class="time">13:30–15:30</span><div><strong>自由活动 / 提前更衣离园</strong><p>不追求玩完所有项目，宝宝和长者累了可先在阴凉处休息。</p></div></div>
+          <div class="item drive"><span class="time">15:30–17:00</span><div><strong>Waterbom → Villa</strong><p>约 45–75 分钟；回 Villa 洗漱、休息后在附近晚餐。</p></div></div>
+        </div><div class="diver-plan"><span>🤿 潜水成员 · OW 第 3 天 · 独立安排</span><div class="timeline"><div class="item drive"><span class="time">约 06:00</span><div><strong>Villa → Sanur（沙努尔）集合</strong><p>同样需 07:00 前抵达；行李与装备前晚整理好。</p></div></div><div class="item"><span class="time">07:00–17:00</span><div><strong>开放水域课程 3、4</strong><p>完成技巧与实操考核；潜点由教练前一天依天气、潮汐确认。</p></div></div><div class="item meal"><span class="time">19:00 后</span><div><strong>可与留下成员会合晚餐</strong><p>Waterbom 成员傍晚已返 Villa；提前回新加坡的一家则不参加。</p></div></div></div></div><div class="day-dining"><span>晚餐备选 · Villa 附近 · SGD / 人</span><a class="dining-card" href="https://maps.app.goo.gl/Rremihg9ACsNrLLj7" target="_blank" rel="noopener noreferrer"><div class="dining-line"><strong>Daeng Burger（大恩汉堡）</strong><span class="rating">★ 4.6 · ~800 评</span></div><p>约 SGD 5–9；便于水上乐园后快速用餐，孩子可点原味款。</p></a><a class="dining-card" href="https://maps.app.goo.gl/zx4e74GAatDSbQ238" target="_blank" rel="noopener noreferrer"><div class="dining-line"><strong>Pizza Fabbrica（披萨法布里卡）</strong><span class="rating">★ 4.7 · ~1,100 评</span></div><p>约 SGD 7–18；共享式点餐，适合疲惫的一天后全家吃饭。</p></a><a class="dining-card" href="https://maps.app.goo.gl/QBm1mMtYGbF5WTDx7?g_st=ic" target="_blank" rel="noopener noreferrer"><div class="dining-line"><strong>Souphoria（猪肋排汤）</strong><span class="rating">★ 4.4 · ~1,440 评</span></div><p>外带到 Villa 最省力；孩子另点不辣主食和全熟鸡肉。</p></a></div><p class="note">🧴 防晒需多次补涂；使用园内储物柜放置推车、干衣与备用尿布会更方便。</p></div>
+      </article>
+
+      <article class="day">
+        <aside class="day-side"><div class="day-no">06</div><div class="day-date">10月22日 · 周四</div><div class="day-theme">Canggu → Jimbaran<br>日落晚餐</div></aside>
+        <div class="day-body"><div class="day-head"><h3>慢享上午 · 打包 · 金巴兰海鲜日落</h3><span class="pill easy">轻松</span></div><figure class="day-photo"><img src="https://jimbaranbayrestaurant.com/wp-content/uploads/2025/06/sunset-dinner-jimbaran-bay-770x386.jpg" alt="金巴兰海滩日落海鲜晚餐实景" loading="lazy" referrerpolicy="no-referrer"><figcaption><a href="https://jimbaranbayrestaurant.com/magical-sunset-dinner/" target="_blank" rel="noopener noreferrer">实景图源：Bawang Merah</a></figcaption></figure><div class="timeline">
+          <div class="item meal"><span class="time">08:00–09:00</span><div><strong>🥐 Villa 早餐</strong><p>最后一个完整日，节奏放慢。</p></div></div>
+          <div class="item drive"><span class="time">09:30–11:30</span><div><strong>Canggu / Berawa 轻松逛</strong><p>约 10–20 分钟；只安排咖啡、采购伴手礼或孩子喜欢的轻活动。</p></div></div>
+          <div class="item meal"><span class="time">11:45–13:00</span><div><strong>午餐 · Berawa / Canggu</strong><p>就近用餐后返 Villa。</p></div></div>
+          <div class="item"><span class="time">13:00–16:00</span><div><strong>🏡 Villa 休息、整理行李</strong><p>预留充足时间打包、洗衣和宝宝午睡；可确认次日送机时间。</p></div></div>
+          <div class="item drive"><span class="time">16:00–17:30</span><div><strong>Villa → Jimbaran Beach（金巴兰海滩）</strong><p>约 60–90 分钟，傍晚交通可能较慢，建议提前订海边桌位。</p></div></div>
+          <div class="item meal"><span class="time">17:30–20:00</span><div><strong>🌅 Jimbaran Beach（金巴兰海滩）日落海鲜晚餐</strong><p>日落前到达；小孩在沙滩活动时请全程陪同，晚餐后直接回 Villa。</p></div></div>
+        </div><div class="day-dining"><span>晚餐备选 · SGD / 人</span><a class="dining-card" href="https://www.google.com/maps/search/?api=1&amp;query=Bawang%20Merah%20Beachfront%20Restaurant%20Jimbaran" target="_blank" rel="noopener noreferrer"><div class="dining-line"><strong>Bawang Merah Beachfront Restaurant（金巴兰红葱海景餐厅）</strong><span class="rating">★ 4.6 · 3,486 评</span></div><p>约 SGD 25–45（视海鲜选择）；海边海鲜晚餐。幼儿点全熟烤鱼/虾、白饭和蔬菜，避免生腌、辣酱与整只带壳海鲜。</p></a></div></div>
+      </article>
+
+      <article class="day">
+        <aside class="day-side"><div class="day-no">07</div><div class="day-date">10月23日 · 周五</div><div class="day-theme">返程日<br>从容出发</div></aside>
+        <div class="day-body"><div class="day-head"><h3>早餐、退房、机场与返程</h3><span class="pill easy">轻松</span></div><figure class="day-photo"><img src="https://img.inews.co.id/media/1200/files/inews_new/2021/10/13/bandara_ngurah_rai_bali.jpg" alt="伍拉赖国际机场实景" loading="lazy" referrerpolicy="no-referrer"><figcaption><a href="https://bali.inews.id/berita/profil-bandara-i-gusti-ngurah-rai-bali-pernah-dibom-jepang-hingga-jadi-pendaratan-pesawat-tempur" target="_blank" rel="noopener noreferrer">实景图源：iNews Bali</a></figcaption></figure><div class="timeline">
+          <div class="item meal"><span class="time">07:30–08:15</span><div><strong>🥐 Villa 早餐</strong><p>简单用餐，确认护照、行李、婴儿用品与退房物品。</p></div></div>
+          <div class="item"><span class="time">08:15–09:00</span><div><strong>Villa 退房</strong><p>和房东确认交接；需要的话可安排寄存行李。</p></div></div>
+          <div class="item drive"><span class="time">09:00–10:15</span><div><strong>Villa → DPS Airport（伍拉·赖国际机场）</strong><p>约 45–75 分钟；预留堵车时间，目标起飞前约 3 小时抵达。</p></div></div>
+          <div class="item"><span class="time">13:15–16:00</span><div><strong>✈️ DPS → SIN · Singapore Airlines SQ939</strong><p>办理托运、退税（如适用）、安检和宝宝换洗后登机；行李额以机票订单为准。</p></div></div>
+        </div></div>
+      </article>
+    </section>
+
+    <section class="tipbox" aria-label="实用提示">
+      <div class="tip"><h3>🚙 用车</h3><p>远程日建议使用 10 小时包车并安装儿童安全座椅；每日出发前再次确认集合时间。</p></div>
+      <div class="tip"><h3>👶 三代同行</h3><p>随身准备遮阳帽、防蚊液、湿巾、零食和一套换洗衣物；以宝宝午睡和长者体力为优先。</p></div>
+      <div class="tip"><h3>🌦️ 天气与弹性</h3><p>午后常有阵雨。户外项目可前置，雨大时保留 Café、Villa 休息或商场作为备选。</p></div>
+    </section>
+
+  </main>
+  <footer>Prepared for the Bali family trip · 17–23 October 2026</footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var dining = document.querySelector(".days > .day:nth-child(4) .day-dining");
+      if (!dining) return;
+      dining.insertAdjacentHTML("afterend", '<div class="spa-options"><span>按摩备选 · 10/20 13:00–15:30 · 打车往返</span><a class="spa-card" href="https://youspaexperience.com/umalas-bali/spa-treatments/massage/" target="_blank" rel="noopener noreferrer"><div class="dining-line"><strong>You Spa Umalas</strong><span class="rating">★ 4.9 · 301 评</span></div><p>Villa 打车约 5–10 分钟；每日 09:00–21:00。巴厘式按摩 60 分钟约 SGD 29、90 分钟约 SGD 39（另 10% 服务费）。离 Villa 最近，适合午休时段。</p></a><a class="spa-card" href="https://www.google.com/maps/search/?api=1&amp;query=Sundari%20Wellness%20Seminyak" target="_blank" rel="noopener noreferrer"><div class="dining-line"><strong>Sundari Wellness · Seminyak（塞米亚克）</strong><span class="rating">★ 4.9 · ~6,500 评</span></div><p>Villa 打车约 15–25 分钟；每日 09:00–22:00。巴厘式按摩 90 分钟约 SGD 43、120 分钟约 SGD 54；环境与评价更强，建议预约。</p></a></div>');
+    });
+  </script>
+</body>
+</html>
