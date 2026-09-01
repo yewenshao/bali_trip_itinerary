@@ -97,9 +97,6 @@
     .note { display: flex; gap: 8px; margin: 18px 0 0; padding: 11px 13px; border-radius: 9px; background: #f0f7f2; color: #466760; font-size: 12px; }
     .packing-section { margin-top: 27px; }.packing-details { overflow: hidden; border: 1px solid #c9ded4; border-radius: 16px; background: var(--paper); box-shadow: 0 7px 20px rgba(28,64,61,.05); }.packing-details > summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 19px 21px; cursor: pointer; list-style: none; background: linear-gradient(110deg, #e4f1eb, #fff8e9); }.packing-details > summary::-webkit-details-marker { display: none; }.packing-title { display: flex; align-items: center; gap: 11px; }.packing-title b { display: block; font-size: 16px; }.packing-title small { display: block; margin-top: 2px; color: var(--muted); font-size: 11px; }.packing-toggle { flex: none; padding: 5px 9px; border-radius: 999px; color: #2f675b; background: rgba(255,255,255,.72); border: 1px solid #bfd8cc; font-size: 11px; font-weight: 800; }.packing-details[open] .packing-toggle::after { content: "收起 / Close"; }.packing-details:not([open]) .packing-toggle::after { content: "展开 / Open"; }.packing-body { padding: 18px 20px 21px; }.packing-intro { margin: 0 0 14px; color: #526f68; font-size: 12px; }.pack-key { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }.pack-key span, .shared-mark { display: inline-flex; align-items: center; padding: 3px 6px; border-radius: 5px; font-size: 10px; font-weight: 800; line-height: 1.25; }.pack-key .individual { color: #166153; background: #dff0e8; }.pack-key .shared, .shared-mark { color: #875515; background: #fff0cf; }.pack-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }.pack-card { padding: 13px 14px; border: 1px solid #e0ece6; border-radius: 11px; background: #fcfdfb; }.pack-card h4 { margin: 0 0 8px; color: var(--sea-dark); font-size: 13px; }.pack-card h4 span { color: #7a918b; font-size: 11px; font-weight: 600; }.pack-list { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; }.pack-list label { display: flex; align-items: flex-start; gap: 7px; color: #45645d; font-size: 12px; line-height: 1.38; cursor: pointer; }.pack-list input { flex: none; width: 14px; height: 14px; margin: 1px 0 0; accent-color: var(--sea); }.pack-list input:checked + span { color: #92a49f; text-decoration: line-through; }.shared-mark { margin-left: 3px; vertical-align: 1px; }.pack-footnote { margin: 14px 0 0; padding: 10px 12px; border-left: 3px solid #e6a547; border-radius: 7px; background: #fff8e9; color: #6f644d; font-size: 11px; line-height: 1.55; }
     .optional-mark { display: inline-flex; align-items: center; margin-left: 3px; padding: 3px 6px; border-radius: 5px; color: #61746f; background: #eef2f0; font-size: 10px; font-weight: 800; font-style: normal; line-height: 1.25; vertical-align: 1px; }.pack-key .optional { color: #61746f; background: #eef2f0; }
-    .tipbox { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 27px; }
-    .tip { padding: 18px 19px; border-radius: 13px; background: #eee1ca; }
-    .tip:nth-child(2) { background: #dcebe2; }.tip:nth-child(3) { background: #d6ebe8; }
     .tip h3 { margin: 0 0 7px; font-size: 14px; }.tip p { margin: 0; color: #466760; font-size: 12px; }
     .day-photo { position: relative; margin: 0 0 18px; overflow: hidden; border-radius: 11px; background: #d4e4dd; }
     .day-photo img { display: block; width: 100%; height: 175px; object-fit: cover; }
@@ -121,7 +118,7 @@
       .summary { width: calc(100% - 28px); grid-template-columns: 1fr 1fr; }
       .summary > div { min-height: 75px; padding: 14px; }.summary > div:nth-child(2) { border-right: 0; }.summary > div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
       .travel-details { width: calc(100% - 28px); grid-template-columns: 1fr; }.flight-area { grid-template-columns: 1fr; }.flight + .flight { border-top: 1px solid var(--line); border-left: 0; }.diver-plan .item { grid-template-columns: 82px 1fr; }.choice-wrap { grid-template-columns: 1fr; }.choice-option::before { top: -8px; left: 24px; width: 1px; height: 7px; border-top: 0; border-left: 1px dashed #b6c9bd; }.packing-details > summary { padding: 16px; }.packing-body { padding: 15px; }.pack-grid { grid-template-columns: 1fr; }
-      main { width: calc(100% - 28px); margin-top: 32px; }.intro { display: block; }.intro p { margin-top: 8px; }.day { grid-template-columns: 1fr; }.day-side { display: flex; align-items: center; gap: 14px; padding: 14px 18px; }.day-no { font-size: 27px; }.day-date, .day-theme { margin: 0; }.day-theme { margin-left: auto; text-align: right; }.day-body { padding: 19px 17px; }.item { grid-template-columns: 82px 1fr; }.tipbox { grid-template-columns: 1fr; gap: 10px; }.day-photo img { height: 150px; }.days > .day:nth-child(3) .day-body, .days > .day:nth-child(4) .day-body, .days > .day:nth-child(5) .day-body { display: block; }.days > .day:nth-child(3) .diver-plan, .days > .day:nth-child(4) .diver-plan, .days > .day:nth-child(5) .diver-plan { margin-top: 17px; }
+      main { width: calc(100% - 28px); margin-top: 32px; }.intro { display: block; }.intro p { margin-top: 8px; }.day { grid-template-columns: 1fr; }.day-side { display: flex; align-items: center; gap: 14px; padding: 14px 18px; }.day-no { font-size: 27px; }.day-date, .day-theme { margin: 0; }.day-theme { margin-left: auto; text-align: right; }.day-body { padding: 19px 17px; }.item { grid-template-columns: 82px 1fr; }.day-photo img { height: 150px; }.days > .day:nth-child(3) .day-body, .days > .day:nth-child(4) .day-body, .days > .day:nth-child(5) .day-body { display: block; }.days > .day:nth-child(3) .diver-plan, .days > .day:nth-child(4) .diver-plan, .days > .day:nth-child(5) .diver-plan { margin-top: 17px; }
     }
     @media print { body { background: white; }.hero { min-height: auto; padding: 30px 24px; }.summary { box-shadow: none; }.day { break-inside: avoid; box-shadow: none; } main { margin-bottom: 18px; } }
   </style>
@@ -237,7 +234,7 @@
     </section>
 
     <section class="packing-section" aria-label="孩子打包清单">
-      <details class="packing-details">
+      <details class="packing-details" open>
         <summary><div class="packing-title"><span aria-hidden="true">🎒</span><div><b>孩子打包清单</b><small>Children’s packing checklist · 8大3小巴厘岛行程</small></div></div><span class="packing-toggle" aria-hidden="true"></span></summary>
         <div class="packing-body">
           <div class="pack-key"><span class="shared">全家共用 / One per family</span></div>
@@ -252,12 +249,6 @@
           <p class="pack-footnote">巴厘岛需特别重视防蚊、防晒与水上看护；儿童防蚊产品按年龄和包装说明使用，婴儿推车可加蚊帐。药品仅带孩子平时已使用或由儿科医生建议的品项。<a href="https://wwwnc.cdc.gov/travel/destinations/traveler/children.immune_compromised/indonesia" target="_blank" rel="noopener noreferrer">查看 CDC Indonesia 儿童旅行建议</a></p>
         </div>
       </details>
-    </section>
-
-    <section class="tipbox" aria-label="实用提示">
-      <div class="tip"><h3>🚙 用车</h3><p>远程日建议使用 10 小时包车并安装儿童安全座椅；每日出发前再次确认集合时间。</p></div>
-      <div class="tip"><h3>👶 三代同行</h3><p>随身准备遮阳帽、防蚊液、湿巾、零食和一套换洗衣物；以宝宝午睡和长者体力为优先。</p></div>
-      <div class="tip"><h3>🌦️ 天气与弹性</h3><p>午后常有阵雨。户外项目可前置，雨大时保留 Café、Villa 休息或商场作为备选。</p></div>
     </section>
 
   </main>
